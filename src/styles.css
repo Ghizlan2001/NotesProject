@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* Form Container */
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3adcb;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px #f91d7d;
+}
+
+/* Input Styles */
+.login,
+.pass {
+  background-color: #fff7f3;
+  border: 3px solid #f8cdda;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #e2166f;
+  padding: 20px;
+  width: 60%;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.login:focus,
+.pass:focus {
+  border-color: ;
+  box-shadow: 0 0 5px #f969a7;
+}
+
+.login::placeholder,
+.pass::placeholder {
+  color: #aaa;
+}
+
+/* Button Styles */
+.button {
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #cdd0fc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #6f78ff;
+  transform: scale(1.02);
+}
+
+.button:active {
+  background-color: #5d67f5;
+}
+
+.button:focus {
+  outline: 2px solid #6f78ff;
+  outline-offset: 2px;
+}
+
+form > * {
+  margin-bottom: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffe6f2;
+  font-family: Arial, sans-serif;
+}
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe6f2;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.note-card {
+  background-color: #fff7f3;
+  border: 3px solid #f8cdda;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.note-card::before,
+.note-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #ffe6f2;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.note-card::before {
+  top: -40px;
+  left: -40px;
+}
+
+.note-card::after {
+  bottom: -40px;
+  right: -40px;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.note-header h3 {
+  font-size: 1.4rem;
+  color: #ff6fae;
+  margin: 0;
+}
+.note-header .note-id {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
+.note-content {
+  margin-bottom: 20px;
+}
+
+.note-content p {
+  font-size: 1rem;
+  color: #6a6a6a;
+  line-height: 1.6;
+}
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suppr,
+.edit,
+.save {
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  font-weight: bold;
+}
+
+.suppr {
+  background-color: #ff9aa2;
+  color: white;
+}
+.suppr:hover {
+  background-color: #ff6f75;
+  transform: scale(1.1);
+}
+
+.edit {
+  background-color: #9aa2ff;
+  color: white;
+}
+
+.edit:hover {
+  background-color: #6f78ff;
+  transform: scale(1.1);
+}
+
+.note-card:hover button {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .note-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .notes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styling for "Add a Note" Button */
+.add-note {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #8e95fb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.add-note:hover {
+  background-color: #4753f8;
+}
+
+.add-note:active {
+  background-color: #8e95fb;
+}
+
+.nav {
+  display: flex;
+  margin-bottom: 15px;
+  background-color: #ed9bbf;
+  padding: 10px;
+  padding-bottom: 4px;
+  width: 100vw;
+}
+.logout,
+.change {
+  padding: 10px;
+  margin: 0px 0px 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+.logout,
+.change {
+  background-color: #e83141;
+  color: white;
+}
+.logout:hover,
+.change:hover {
+  background-color: #680a0d;
+  transform: scale(1.1);
+}
+
+.save {
+  background-color: #f7685e;
+  color: white;
+}
+.save:hover {
+  background-color: #c34420;
+  transform: scale(1.1);
+}
